@@ -4,7 +4,7 @@ metadata:
   name: python-docker-test
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myalias=registry.container-registry:5000/python-docker-test
+    argocd-image-updater.argoproj.io/image-list: myalias=192.168.2.124:32000/python-docker-test
     argocd-image-updater.argoproj.io/myalias.force-update: "true"
 spec:
   project: default
