@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: python-docker-test
-        image: 192.168.2.124:32000/python-docker-test:3
+        image: 192.168.64.5:32000/python-docker-test:3
