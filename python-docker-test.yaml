@@ -4,8 +4,9 @@ metadata:
   name: python-docker-test
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myalias=localhost:32000/python-docker-test
-    argocd-image-updater.argoproj.io/myalias.force-update: "true"
+    argocd-image-updater.argoproj.io/image-list: main=localhost:32000/python-docker-test
+    argocd-image-updater.argoproj.io/main.force-update: "true"
+    argocd-image-updater.argoproj.io/main.update-strategy: digest
 spec:
   project: default
   source:
