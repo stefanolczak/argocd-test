@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: python-docker-test
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: myalias=localhost:32000/python-docker-test
+    argocd-image-updater.argoproj.io/myalias.force-update: "true"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/stefanolczak/argocd-test
+    targetRevision: HEAD
+    path: python-docker-test
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: bit-arbi

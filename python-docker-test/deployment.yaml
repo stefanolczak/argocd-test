@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-docker-test
+  labels:
+    app: python-docker-test
+spec:
+  selector:
+    matchLabels:
+      app: python-docker-test
+  template:
+    metadata:
+      labels:
+        app: python-docker-test
+    spec:
+      containers:
+      - name: python-docker-test
+        image: localhost:32000/python-docker-test:3
