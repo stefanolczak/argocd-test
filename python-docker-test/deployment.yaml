@@ -16,3 +16,4 @@ spec:
       containers:
       - name: python-docker-test
         image: localhost:32000/python-docker-test:latest
+  revisionHistoryLimit: 0
